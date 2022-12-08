@@ -1,0 +1,151 @@
+@import url(//db.onlinewebfonts.com/c/0201813274259c3d4f78760d19270bab?family=DINNextLTW04-Medium);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&family=Karla:wght@300;400;500&family=Kenia&family=Poppins:wght@200;300;400;500&family=Zen+Dots&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: DINNextLTW04-Medium;
+}
+.agent-all {
+  height: 100vh;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 32px;
+  margin-left: 10px;
+  margin-top: 5px;
+  color: black;
+}
+.agent-pic {
+  height: 250px;
+  display: flex;
+  background-color: white;
+  border-radius: 5000px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  transition: transform 0.2s;
+}
+
+.agent-pic:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.agent-title {
+  font-size: 72px;
+  font-family: zen dots;
+  margin-bottom: 20px;
+  padding-top: 40px;
+  color: aliceblue;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+  text-shadow: 3px 3px red;
+  font-weight: 600;
+}
+
+.pic-title {
+  display: flex;
+  align-items: center;
+}
+
+.title-desc {
+  display: inline;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 100px;
+  height: 420px;
+  margin-right: 10px;
+  animation: scroll 80s infinite linear;
+  background-repeat: repeat-y;
+}
+
+@keyframes scroll {
+  0% {
+    background-position: right 0%;
+  }
+  100% {
+    background-position: right 1000%;
+  }
+}
+
+.non-bckground {
+  width: 40%;
+  color: aliceblue;
+  margin-left: 10px;
+}
+
+.non-bckground > img {
+  height: 50px;
+}
+
+.non-bckground > p {
+  margin-top: 10px;
+  color: grey;
+  font-family: poppins;
+  font-weight: 600;
+}
+
+.agent-abilities {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: none;
+  height: 100px;
+  align-items: center;
+  margin: 20px 10px;
+  font-family: zen dots;
+}
+
+.ability1 {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  padding: 7px;
+}
+.ability1 span {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: #fff;
+  /* white-space: nowrap; */
+  padding: 10px 15px;
+  border-radius: 7px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  width: 300px;
+  display: inline-block;
+}
+.ability1 span::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border: 15px solid;
+  border-color: black #0000 #0000 #0000;
+}
+
+.ability1:hover span {
+  opacity: 1;
+}
+
+.agent-abilities > div > img {
+  height: 40px;
+}
+
+.agent-abilities > div > span h3 {
+  font-size: 18px;
+  color: red;
+}
