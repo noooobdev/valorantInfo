@@ -31,6 +31,7 @@ body {
   margin: 10px;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   transition: transform 0.2s;
+  cursor: pointer;
 }
 
 .agent-pic:hover {
@@ -52,6 +53,44 @@ body {
   text-shadow: 3px 3px red;
   font-weight: 600;
 }
+.role-icon {
+  transition: transform 0.3s;
+  height: 50px;
+}
+.role-icon:hover {
+  transform: scale(1.2);
+}
+.role-info {
+  position: relative;
+  padding: 20px;
+  cursor: pointer;
+  padding: 5px;
+}
+.role-info span {
+  position: absolute;
+  left: 48%;
+  bottom: -10%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 7px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  width: 300px;
+  display: inline-block;
+}
+.role-info span::before {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+.role-info:hover span {
+  opacity: 1;
+}
 
 .pic-title {
   display: flex;
@@ -60,10 +99,10 @@ body {
 
 .title-desc {
   display: inline;
-  padding: 20px;
+  padding: 30px;
   gap: 20px;
   border-radius: 100px;
-  height: 420px;
+  height: 450px;
   margin-right: 10px;
   animation: scroll 80s infinite linear;
   background-repeat: repeat-y;
@@ -82,10 +121,6 @@ body {
   width: 40%;
   color: aliceblue;
   margin-left: 10px;
-}
-
-.non-bckground > img {
-  height: 50px;
 }
 
 .non-bckground > p {

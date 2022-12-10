@@ -15,13 +15,23 @@ function Agento({ agents, setAgents }) {
       .then((res) => setOneAgent(res.data.data));
   }, []);
 
+  function agentVoice() {
+    var audio = new Audio(oneAgent?.voiceLine?.mediaList[0].wave);
+    audio.play();
+  }
+
   return (
     <div className="agent-all">
       <button className="back-btn" onClick={() => navigate(-1)}>
         <BiArrowBack />
       </button>
       <div className="pic-title">
-        <img className="agent-pic" src={oneAgent?.displayIcon} />
+        <img
+          className="agent-pic"
+          src={oneAgent?.displayIcon}
+          onClick={agentVoice}
+        />
+
         <div
           className="title-desc"
           style={{
@@ -30,7 +40,13 @@ function Agento({ agents, setAgents }) {
         >
           <div className="non-bckground">
             <h1 className="agent-title">{oneAgent?.displayName}</h1>
-            <img src={oneAgent?.role?.displayIcon} />
+            <div className="role-info">
+              <span>
+                <h3>{oneAgent?.role?.displayName}</h3>
+                <p>{oneAgent?.role?.description}</p>
+              </span>
+              <img src={oneAgent?.role?.displayIcon} className="role-icon" />
+            </div>
             <p>{oneAgent?.description}</p>
             <p style={{ color: "red" }}>{oneAgent?.developerName}</p>
           </div>

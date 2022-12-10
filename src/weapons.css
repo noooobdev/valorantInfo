@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&family=Karla:wght@300;400;500&family=Kenia&family=Poppins:wght@200;300;400;500&family=Zen+Dots&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: aliceblue;
+}
+
+.guns-card {
+  border-radius: 40px;
+  background: radial-gradient(
+    circle,
+    rgba(121, 121, 121, 1) 44%,
+    rgba(0, 0, 0, 1) 96%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 40px;
+  flex-direction: column;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  font-family: poppins;
+  transition: transform 0.5s;
+}
+.guns-card:hover {
+  transform: scale(1.2);
+  box-shadow: #b200009c 0 0 15px 10px;
+}
+
+.guns-card > h2 {
+  font-weight: 600;
+  font-size: 32px;
+  color: black;
+  text-shadow: 2px 2px #b200009c;
+}
+.guns-card > img {
+  height: 80px;
+}
+.guns-card > p {
+  color: white;
+  font-weight: 300;
+}
