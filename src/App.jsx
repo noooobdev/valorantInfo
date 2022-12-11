@@ -6,10 +6,12 @@ import axios from "axios";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Agento from "./Agento";
 import Weapons from "./Weapons";
+import Maps from "./Maps";
 
 function App() {
   const [agents, setAgents] = useState([]);
   const [guns, setGuns] = useState([]);
+  const [maps, setMaps] = useState([]);
 
   useEffect(() => {
     axios
@@ -23,6 +25,12 @@ function App() {
       .then((res) => setGuns(res.data.data));
   }, []);
 
+  useEffect(() => {
+    axios
+      .get("https://valorant-api.com/v1/maps")
+      .then((res) => setMaps(res.data.data));
+  }, []);
+
   return (
     <Router>
       <div className="App">
@@ -31,6 +39,7 @@ function App() {
           <Route exact path="/" element={<Cards agents={agents} />} />
           <Route path=":agentId" element={<Agento />} />
           <Route exact path="/weapons" element={<Weapons guns={guns} />} />
+          <Route exact path="/maps" element={<Maps maps={maps} />} />
         </Routes>
       </div>
     </Router>

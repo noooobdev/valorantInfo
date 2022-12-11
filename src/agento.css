@@ -150,7 +150,7 @@ body {
 .ability1 span {
   position: absolute;
   left: 50%;
-  bottom: 100%;
+  bottom: 120%;
   transform: translateX(-50%);
   background-color: black;
   color: #fff;

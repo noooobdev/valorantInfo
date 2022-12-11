@@ -42,14 +42,22 @@ nav {
   color: black;
 }
 
-nav > h2 {
+.main-logo {
   padding: 10px;
-  font-size: 40px;
+  font-size: 36px;
   display: flex;
   justify-content: center;
   font-family: zen dots;
   color: white;
   text-shadow: 5px 5px grey;
+  cursor: pointer;
+}
+.top > h1 {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 42px;
+  color: black;
+  font-family: zen dots;
 }
 .cards {
   display: flex;

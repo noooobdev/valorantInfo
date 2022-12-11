@@ -19,32 +19,62 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 500px;
+  width: 400px;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 40px;
   flex-direction: column;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   font-family: poppins;
-  transition: transform 0.5s;
+  transition: transform 0.5s ease;
+  overflow: hidden;
+  position: relative;
 }
 .guns-card:hover {
-  transform: scale(1.2);
-  box-shadow: #b200009c 0 0 15px 10px;
+  transform: scale(1.1);
+  background: linear-gradient(
+    0deg,
+    rgba(253, 253, 253, 1) 0%,
+    rgba(119, 119, 119, 1) 90%
+  );
+}
+
+.guns-card:hover .guns-stats {
+  transform: translateY(0);
+  position: inherit;
+}
+
+.weapons > h1 {
+  position: relative;
+  color: black;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-size: 42px;
+  font-family: zen dots;
 }
 
 .guns-card > h2 {
   font-weight: 600;
   font-size: 32px;
-  color: black;
+  color: white;
   text-shadow: 2px 2px #b200009c;
+  font-family: zen dots;
+  margin-bottom: 20px;
 }
 .guns-card > img {
-  height: 80px;
+  height: 60px;
 }
-.guns-card > p {
-  color: white;
-  font-weight: 300;
+.guns-stats {
+  color: black;
+  font-weight: 400;
+  font-size: 18px;
+  transition: transform 0.5s ease;
+  transform: translateY(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  transition: transform 0.5s ease;
 }
